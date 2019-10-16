@@ -6,23 +6,25 @@ public class MainTest {
 		// TODO Auto-generated method stub
 		AVLTree<Integer> avltree = new AVLTree<Integer>();
 		
-		avltree.insert(5);
-		avltree.insert(2);
-		avltree.insert(8);
-		avltree.insert(1);
-		avltree.insert(9);
-		avltree.insert(7);
-		avltree.insert(3);
-		avltree.insert(4);
-		avltree.insert(10);
-		avltree.insert(6);
+		avltree.insert(100);
+		avltree.insert(300);
+		avltree.insert(400);
+		avltree.insert(350);
+		avltree.insert(375);
+		avltree.insert(50);
+		avltree.insert(200);
+		avltree.insert(360);
+		avltree.insert(380);
+		avltree.insert(500);
+		avltree.insert(390);
 
 		System.out.println(avltree.toString());
 
-		avltree.remove(10);
-		avltree.remove(5);
-
-		System.out.println(avltree.toString());
+		/**
+		 * avltree.remove(10); avltree.remove(5);
+		 * 
+		 * System.out.println(avltree.toString());
+		 */
 	}
 
 }

@@ -239,7 +239,6 @@ public class AVLTree<T extends Comparable<T>> {
         Node<T> temp;
         while (!aux.isEmpty()) {
             temp = aux.remove(0);
-            System.out.println(temp.getElement());
             lista.add(temp.getElement());
             lista2.add(temp.getBalance());
             if (temp.getLeft() != null) {
