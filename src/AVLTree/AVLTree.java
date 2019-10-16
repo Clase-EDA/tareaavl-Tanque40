@@ -108,16 +108,15 @@ public class AVLTree<T extends Comparable<T>> {
         if (contains(element)) {
             return false;
         } else {
-            Node<T> temp = root;
-            temp = insert(element, temp);
-            updateBalance(temp);
+            root = insert(element, root);
+            updateBalance(root);
             cont++;
             return true;
         }
     }
     private Node<T> insert(T element, Node<T> current) {
         if (current == null) {// Agrega el element
-            current = new Node<>(element);
+            current = new Node<T>(element);
             current.setBalance(height(current.getRight()) - height(current.getLeft()));
         } else {
             if (element.compareTo(current.getElement()) < 0) {
@@ -231,7 +230,7 @@ public class AVLTree<T extends Comparable<T>> {
     }
 
 
-    public String imprime() {
+    public String toString() {
         StringBuilder sb = new StringBuilder();
         ArrayList<Node<T>> aux = new ArrayList<>();
         ArrayList<T> lista = new ArrayList<>();
@@ -240,6 +239,7 @@ public class AVLTree<T extends Comparable<T>> {
         Node<T> temp;
         while (!aux.isEmpty()) {
             temp = aux.remove(0);
+            System.out.println(temp.getElement());
             lista.add(temp.getElement());
             lista2.add(temp.getBalance());
             if (temp.getLeft() != null) {

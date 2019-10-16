@@ -19,7 +19,7 @@ public class Node<T extends Comparable<T>>{
         height = 0;
     }
 
-    public void hang(Node current){
+    public void hang(Node<T> current){
         if (current == null) {
             return;
         }
